@@ -1,1 +1,340 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rain Official Website</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5fbff;
+      color: #123;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0077b6, #00b4d8);
+      color: white;
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 50px 20px;
+      background:
+        linear-gradient(rgba(0, 119, 182, 0.65), rgba(0, 180, 216, 0.65)),
+        url("https://images.unsplash.com/photo-1501691223387-dd0500403074?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background: white;
+      color: #0077b6;
+      padding: 13px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      transform: scale(1.05);
+    }
+
+    section {
+      padding: 70px 6%;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 35px;
+      color: #0077b6;
+      margin-bottom: 15px;
+    }
+
+    .intro {
+      max-width: 750px;
+      margin: auto;
+      color: #555;
+    }
+
+    .products {
+      background: white;
+    }
+
+    .product-grid {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+
+    .card {
+      background: #f5fbff;
+      border-radius: 18px;
+      padding: 25px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+    }
+
+    .card-icon {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #0077b6;
+      margin-bottom: 10px;
+    }
+
+    .about {
+      background: linear-gradient(135deg, #e8f8ff, #ffffff);
+    }
+
+    .contact {
+      background: #0077b6;
+      color: white;
+    }
+
+    .contact h2 {
+      color: white;
+    }
+
+    footer {
+      background: #023e8a;
+      color: white;
+      text-align: center;
+      padding: 25px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 7px;
+        font-size: 14px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 50px 5%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">RAIN</div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <section class="hero" id="home">
+    <div class="hero-content">
+
+      <h1>Welcome to Rain</h1>
+
+      <p>
+        Beautiful design, quality products and a brand made with care.
+      </p>
+
+      <a href="#products" class="button">Explore Products</a>
+
+    </div>
+  </section>
+
+
+  <section>
+    <h2>Why Rain?</h2>
+
+    <p class="intro">
+      Rain is an emerging brand focused on beautiful design,
+      quality products and creating a better experience for everyone.
+    </p>
+
+    <div class="product-grid">
+
+      <div class="card">
+        <div class="card-icon">💎</div>
+        <h3>Premium Quality</h3>
+        <p>
+          Designed with care and made for you.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🌧️</div>
+        <h3>Inspired by Rain</h3>
+        <p>
+          Fresh ideas inspired by the beauty and calmness of rain.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">❤️</div>
+        <h3>Made with Care</h3>
+        <p>
+          Every Rain product represents our passion and dedication.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="products" id="products">
+
+    <h2>Our Products</h2>
+
+    <p class="intro">
+      Discover the Rain collection. More exciting products
+      will be added here as our brand grows.
+    </p>
+
+    <div class="product-grid">
+
+      <div class="card">
+        <div class="card-icon">🧼</div>
+        <h3>Rain Organic Soap</h3>
+        <p>
+          Natural beauty inspired by the freshness of rain.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">👜</div>
+        <h3>Rain Bags</h3>
+        <p>
+          Stylish and practical designs for everyday life.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">✨</div>
+        <h3>Coming Soon</h3>
+        <p>
+          More Rain products are coming soon.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="about" id="about">
+
+    <h2>About Rain</h2>
+
+    <p class="intro">
+      Rain is an emerging brand focused on beautiful design
+      and quality products.
+
+      Our goal is to build a trusted brand that brings
+      freshness, creativity and quality into everyday life.
+    </p>
+
+  </section>
+
+
+  <section class="contact" id="contact">
+
+    <h2>Contact Rain</h2>
+
+    <p>
+      Thank you for visiting Rain Official Website.
+    </p>
+
+    <br>
+
+    <a href="mailto:rainofficialbdwwwcom@gmail.com" class="button">
+      Contact Us
+    </a>
+
+  </section>
+
+
+  <footer>
+
+    <p>
+      © 2026 Rain Official Website. All Rights Reserved.
+    </p>
+
+  </footer>
+
+</body>
+</html>
