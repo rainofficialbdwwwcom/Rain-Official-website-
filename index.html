@@ -15,14 +15,18 @@
       font-family: Arial, sans-serif;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: #f5fbff;
-      color: #123;
-      line-height: 1.6;
+      color: #18323d;
+      line-height: 1.7;
     }
 
     header {
-      background: linear-gradient(135deg, #0077b6, #00b4d8);
+      background: rgba(0, 119, 182, 0.96);
       color: white;
       padding: 18px 6%;
       display: flex;
@@ -31,58 +35,66 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
     }
 
     .logo {
-      font-size: 28px;
+      font-size: 30px;
       font-weight: bold;
-      letter-spacing: 2px;
+      letter-spacing: 4px;
     }
 
     nav a {
       color: white;
       text-decoration: none;
-      margin-left: 20px;
+      margin-left: 22px;
       font-weight: bold;
+      transition: 0.3s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      opacity: 0.75;
     }
 
     .hero {
-      min-height: 80vh;
+      min-height: 82vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 50px 20px;
+      padding: 60px 20px;
+
       background:
-        linear-gradient(rgba(0, 119, 182, 0.65), rgba(0, 180, 216, 0.65)),
+        linear-gradient(
+          rgba(0, 85, 125, 0.58),
+          rgba(0, 150, 180, 0.58)
+        ),
         url("https://images.unsplash.com/photo-1501691223387-dd0500403074?auto=format&fit=crop&w=1600&q=80")
         center/cover;
+
       color: white;
     }
 
     .hero-content {
-      max-width: 750px;
+      max-width: 800px;
     }
 
     .hero h1 {
-      font-size: 55px;
-      margin-bottom: 15px;
+      font-size: 58px;
+      margin-bottom: 18px;
+      letter-spacing: 2px;
     }
 
     .hero p {
-      font-size: 20px;
-      margin-bottom: 30px;
+      font-size: 21px;
+      margin-bottom: 32px;
     }
 
     .button {
       display: inline-block;
       background: white;
       color: #0077b6;
-      padding: 13px 28px;
+      padding: 14px 30px;
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
@@ -90,70 +102,104 @@
     }
 
     .button:hover {
-      transform: scale(1.05);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
     section {
-      padding: 70px 6%;
+      padding: 80px 6%;
       text-align: center;
     }
 
     section h2 {
-      font-size: 35px;
+      font-size: 38px;
       color: #0077b6;
       margin-bottom: 15px;
     }
 
     .intro {
-      max-width: 750px;
+      max-width: 760px;
       margin: auto;
-      color: #555;
+      color: #5b6870;
+      font-size: 17px;
+    }
+
+    .why-rain {
+      background: #ffffff;
     }
 
     .products {
-      background: white;
+      background:
+        linear-gradient(135deg, #f5fbff, #ffffff);
     }
 
     .product-grid {
-      margin-top: 40px;
+      margin-top: 45px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 25px;
     }
 
     .card {
-      background: #f5fbff;
-      border-radius: 18px;
-      padding: 25px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      background: white;
+      border-radius: 20px;
+      padding: 30px 22px;
+      box-shadow: 0 7px 25px rgba(0, 70, 100, 0.09);
       transition: 0.3s;
+      border: 1px solid rgba(0, 119, 182, 0.08);
     }
 
     .card:hover {
-      transform: translateY(-7px);
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 70, 100, 0.14);
     }
 
     .card-icon {
-      font-size: 50px;
+      font-size: 48px;
       margin-bottom: 15px;
     }
 
     .card h3 {
       color: #0077b6;
       margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .card p {
+      color: #64747c;
+      font-size: 15px;
     }
 
     .about {
       background: linear-gradient(135deg, #e8f8ff, #ffffff);
     }
 
+    .about-box {
+      max-width: 850px;
+      margin: 35px auto 0;
+      background: white;
+      padding: 35px;
+      border-radius: 20px;
+      box-shadow: 0 7px 25px rgba(0, 70, 100, 0.08);
+    }
+
+    .about-box p {
+      color: #53656e;
+      font-size: 17px;
+    }
+
     .contact {
-      background: #0077b6;
+      background: linear-gradient(135deg, #0077b6, #00a8c6);
       color: white;
     }
 
     .contact h2 {
       color: white;
+    }
+
+    .contact p {
+      margin-bottom: 25px;
+      font-size: 17px;
     }
 
     footer {
@@ -163,15 +209,34 @@
       padding: 25px;
     }
 
+    footer p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
     @media (max-width: 700px) {
+
       header {
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
+        padding: 16px 5%;
+      }
+
+      .logo {
+        font-size: 27px;
+      }
+
+      nav {
+        text-align: center;
       }
 
       nav a {
-        margin: 0 7px;
-        font-size: 14px;
+        margin: 0 6px;
+        font-size: 13px;
+      }
+
+      .hero {
+        min-height: 75vh;
       }
 
       .hero h1 {
@@ -183,7 +248,15 @@
       }
 
       section {
-        padding: 50px 5%;
+        padding: 60px 5%;
+      }
+
+      section h2 {
+        font-size: 31px;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -191,7 +264,10 @@
 
 <body>
 
+  <!-- Header -->
+
   <header>
+
     <div class="logo">RAIN</div>
 
     <nav>
@@ -200,133 +276,298 @@
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
+
   </header>
 
 
+  <!-- Hero -->
+
   <section class="hero" id="home">
+
     <div class="hero-content">
 
       <h1>Welcome to Rain</h1>
 
       <p>
-        Beautiful design, quality products and a brand made with care.
+        A handcrafted beauty & lifestyle brand inspired
+        by the freshness of rain.
       </p>
 
-      <a href="#products" class="button">Explore Products</a>
+      <a href="#products" class="button">
+        Explore Products
+      </a>
 
     </div>
+
   </section>
 
 
-  <section>
+  <!-- Why Rain -->
+
+  <section class="why-rain">
+
     <h2>Why Rain?</h2>
 
     <p class="intro">
-      Rain is an emerging brand focused on beautiful design,
-      quality products and creating a better experience for everyone.
+      Rain is built around a simple idea — bringing the feeling
+      of freshness, care and thoughtful craftsmanship into
+      everyday life.
     </p>
 
     <div class="product-grid">
 
       <div class="card">
+
         <div class="card-icon">💎</div>
-        <h3>Premium Quality</h3>
+
+        <h3>Quality</h3>
+
         <p>
-          Designed with care and made for you.
+          We believe every product should be created
+          with attention, care and purpose.
         </p>
+
       </div>
 
+
       <div class="card">
+
         <div class="card-icon">🌧️</div>
+
         <h3>Inspired by Rain</h3>
+
         <p>
-          Fresh ideas inspired by the beauty and calmness of rain.
+          The freshness and calm feeling of rain
+          inspire the spirit of our brand.
         </p>
+
       </div>
 
+
       <div class="card">
+
         <div class="card-icon">❤️</div>
+
         <h3>Made with Care</h3>
+
         <p>
-          Every Rain product represents our passion and dedication.
+          From handmade creations to everyday essentials,
+          care is at the heart of Rain.
         </p>
+
       </div>
 
     </div>
+
   </section>
 
+
+  <!-- Products -->
 
   <section class="products" id="products">
 
     <h2>Our Products</h2>
 
     <p class="intro">
-      Discover the Rain collection. More exciting products
-      will be added here as our brand grows.
+      Discover the Rain collection — thoughtfully crafted products
+      inspired by freshness, simplicity and everyday life.
     </p>
 
     <div class="product-grid">
 
+
       <div class="card">
+
         <div class="card-icon">🧼</div>
+
         <h3>Rain Organic Soap</h3>
+
         <p>
-          Natural beauty inspired by the freshness of rain.
+          Handcrafted soap made with carefully selected
+          natural and organic ingredients, inspired by
+          the freshness of rain.
         </p>
+
       </div>
 
-      <div class="card">
-        <div class="card-icon">👜</div>
-        <h3>Rain Bags</h3>
-        <p>
-          Stylish and practical designs for everyday life.
-        </p>
-      </div>
 
       <div class="card">
+
+        <div class="card-icon">🧴</div>
+
+        <h3>Rain Shampoo</h3>
+
+        <p>
+          Thoughtfully crafted with carefully selected
+          ingredients for a fresh everyday experience.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">🌿</div>
+
+        <h3>Rain Hair Oil</h3>
+
+        <p>
+          Inspired by simple, thoughtful care and
+          the refreshing spirit of Rain.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">💧</div>
+
+        <h3>Rain Lip Gel</h3>
+
+        <p>
+          A simple touch of care inspired by the
+          freshness and simplicity of Rain.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
         <div class="card-icon">✨</div>
-        <h3>Coming Soon</h3>
+
+        <h3>Rain Serum</h3>
+
         <p>
-          More Rain products are coming soon.
+          Thoughtfully crafted as a refreshing addition
+          to your everyday care.
         </p>
+
       </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">👗</div>
+
+        <h3>Rain Women's Dress</h3>
+
+        <p>
+          Elegant designs created with care for
+          comfortable and effortless everyday style.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">👰</div>
+
+        <h3>Rain Gown</h3>
+
+        <p>
+          Graceful designs thoughtfully created
+          for beautiful moments.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">🥻</div>
+
+        <h3>Rain Sari</h3>
+
+        <p>
+          Timeless elegance with a touch of Rain's
+          signature simplicity.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">👜</div>
+
+        <h3>Rain Bags</h3>
+
+        <p>
+          Stylish and practical designs made
+          for everyday life.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <div class="card-icon">👕</div>
+
+        <h3>Rain T-Shirts</h3>
+
+        <p>
+          Simple, comfortable designs made
+          for everyday living.
+        </p>
+
+      </div>
+
 
     </div>
 
   </section>
 
 
+  <!-- About -->
+
   <section class="about" id="about">
 
     <h2>About Rain</h2>
 
-    <p class="intro">
-      Rain is an emerging brand focused on beautiful design
-      and quality products.
+    <div class="about-box">
 
-      Our goal is to build a trusted brand that brings
-      freshness, creativity and quality into everyday life.
-    </p>
+      <p>
+        Rain is a growing beauty and lifestyle brand inspired
+        by the freshness and peaceful feeling of rain.
+
+        We believe beautiful products should be created with
+        care, thoughtful design and attention to quality.
+
+        Our journey begins with handcrafted beauty products
+        and will continue to grow into a wider lifestyle
+        collection.
+      </p>
+
+    </div>
 
   </section>
 
+
+  <!-- Contact -->
 
   <section class="contact" id="contact">
 
     <h2>Contact Rain</h2>
 
     <p>
-      Thank you for visiting Rain Official Website.
+      Thank you for visiting the Rain Official Website.
     </p>
 
-    <br>
-
-    <a href="mailto:rainofficialbdwwwcom@gmail.com" class="button">
+    <a
+      href="mailto:rainofficialbdwwwcom@gmail.com"
+      class="button"
+    >
       Contact Us
     </a>
 
   </section>
 
+
+  <!-- Footer -->
 
   <footer>
 
@@ -335,6 +576,7 @@
     </p>
 
   </footer>
+
 
 </body>
 </html>
